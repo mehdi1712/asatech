@@ -24,22 +24,20 @@ class About extends Component {
                <div className="nine columns main-col">
                   <h2>About Us</h2>
 
-                  <p>{bio}</p>
+                  <p>we use latest technology to create new products in iot context. our team consist of four people, each of whom is excellent in their specialty.</p>
                   <div className="row">
                      <div className="columns contact-details">
                         <h2>Contact Details</h2>
                         <p className="address">
-                           <span>{name}</span>
-                           <br />
+                           {/*<span>{name}</span>*/}
+                           {/*<br />*/}
                            <span>
-                              {street}
-                              <br />
-                              {city} {state}, {zip}
+                              Iran - Semnan Province - Semnan
                            </span>
                            <br />
-                           <span>{phone}</span>
+                           <span>02333335544</span>
                            <br />
-                           <span>{email}</span>
+                           <span>asa.technology.group@gmail.com</span>
                         </p>
                      </div>
                   </div>
