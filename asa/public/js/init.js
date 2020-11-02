@@ -134,9 +134,6 @@ jQuery(document).ready(function ($) {
       var contactSubject = $("#contactForm #contactSubject").val()
       var contactMessage = $("#contactForm #contactMessage").val()
 
-      var data =
-         "contactName=" + contactName + "&contactEmail=" + contactEmail + "&contactSubject=" + contactSubject + "&contactMessage=" + contactMessage
-
       return false
    })
 })

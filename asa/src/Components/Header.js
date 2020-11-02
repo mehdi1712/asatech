@@ -13,12 +13,12 @@ const customSocial = [
    },
    {
       name: "github",
-      url: "http://github.com/tbakerx",
+      url: "http://asa.devv.ir",
       className: "fa fa-github",
    },
    {
       name: "skype",
-      url: "http://skype.com",
+      url: "http://asa.devv.ir",
       className: "fa fa-skype",
    },
 ]
