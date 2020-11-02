@@ -134,9 +134,15 @@ jQuery(document).ready(function ($) {
       var contactSubject = $("#contactForm #contactSubject").val()
       var contactMessage = $("#contactForm #contactMessage").val()
 
-      var data =
-         "contactName=" + contactName + "&contactEmail=" + contactEmail + "&contactSubject=" + contactSubject + "&contactMessage=" + contactMessage
-
+      $.ajax({
+         url: "http://asa.devv.ir/email.php?subject=" +
+             contactName +
+             "&msg=" +
+             contactMessage +
+             "&email="+
+             contactEmail,
+         type: "get"
+      });
       return false
    })
 })
