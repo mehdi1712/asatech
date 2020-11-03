@@ -2,61 +2,59 @@ import React, { Component } from "react"
 
 const customProjects = [
    {
-      title: "Canadian Wanderlust",
-      category: "My Travel Blog for my post-university travels",
+      title: "Smart Home",
+      category: "Lorem ipsum is a placeholder text commonly",
       image: "canadian-wanderlust.jpg",
-      url: "https://www.canadianwanderlust.com",
+      url: "http://asa.devv.ir",
    },
    {
-      title: "Fury Fighting Gear",
-      category: "(offline now) A fighting gear company I started",
-      image: "fury-fighting-gear.jpg",
-      url: "http://www.timbakerdev.com",
-   },
-   {
-      title: "Original Thai Food",
-      category: "Website I built for a restaurant I like in Thailand",
+      title: "Embedded Development",
+      category: "Lorem ipsum is a placeholder text commonly",
       image: "original-thai-food.jpg",
-      url: "http://www.timbakerdev.com/originalthaifood.github.io",
+      url: "http://asa.devv.ir",
    },
    {
-      title: "Resume Website",
-      category: "A React based resume website template",
+      title: "Android Development",
+      category: "Lorem ipsum is a placeholder text commonly",
       image: "resume-website.jpg",
-      url: "http://www.timbakerdev.com",
+      url: "http://asa.devv.ir",
    },
    {
-      title: "Smirkspace",
-      category: "(MVP Only) A React and Meteor based chat University project.",
-      image: "smirkspace.jpg",
-      url: "http://www.smirkspace.com",
+      title: "Web Development",
+      category: "Lorem ipsum is a placeholder text commonly",
+      image: "fury-fighting-gear.jpg",
+      url: "http://asa.devv.ir",
    },
-
+   {
+      title: "IOS Development",
+      category: "Lorem ipsum is a placeholder text commonly",
+      image: "smirkspace.jpg",
+      url: "http://asa.devv.ir",
+   },
+]
 class Portfolio extends Component {
    render() {
-      if (this.props.data) {
-         var projects = this.props.data.projects.map(function (projects) {
-            var projectImage = "images/portfolio/" + projects.image
-            return (
-               <div key={projects.title} className="columns portfolio-item">
-                  <div className="item-wrap">
-                     <a href="https://devv.ir" title={projects.title}>
-                        <img alt={projects.title} src={projectImage} />
-                        <div className="overlay">
-                           <div className="portfolio-item-meta">
-                              <h5>{projects.title}</h5>
-                              <p>{projects.category}</p>
-                           </div>
+      var projects = customProjects.map(function (projects) {
+         var projectImage = "images/portfolio/" + projects.image
+         return (
+            <div key={projects.title} className="columns portfolio-item">
+               <div className="item-wrap">
+                  <a href={projects.url} title={projects.title}>
+                     <img alt={projects.title} src={projectImage} />
+                     <div className="overlay">
+                        <div className="portfolio-item-meta">
+                           <h5>{projects.title}</h5>
+                           <p>{projects.category}</p>
                         </div>
-                        <div className="link-icon">
-                           <i className="fa fa-link"></i>
-                        </div>
-                     </a>
-                  </div>
+                     </div>
+                     <div className="link-icon">
+                        <i className="fa fa-link"></i>
+                     </div>
+                  </a>
                </div>
-            )
-         })
-      }
+            </div>
+         )
+      })
 
       return (
          <section id="portfolio">
