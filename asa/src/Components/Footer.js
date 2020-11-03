@@ -13,28 +13,26 @@ const customSocial = [
    },
    {
       name: "github",
-      url: "http://github.com/tbakerx",
+      url: "http://asa.devv.ir",
       className: "fa fa-github",
    },
    {
       name: "skype",
-      url: "http://skype.com",
+      url: "http://asa.devv.ir",
       className: "fa fa-skype",
    },
 ]
 class Footer extends Component {
    render() {
-      if (this.props.data) {
-         var networks = customSocial.map(function (network) {
-            return (
-               <li key={network.name}>
-                  <a href={network.url}>
-                     <i className={network.className}></i>
-                  </a>
-               </li>
-            )
-         })
-      }
+      var networks = customSocial.map(function (network) {
+         return (
+            <li key={network.name}>
+               <a href={network.url}>
+                  <i className={network.className}></i>
+               </a>
+            </li>
+         )
+      })
 
       return (
          <footer>

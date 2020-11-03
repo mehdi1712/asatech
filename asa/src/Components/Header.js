@@ -13,32 +13,26 @@ const customSocial = [
    },
    {
       name: "github",
-      url: "http://github.com/tbakerx",
+      url: "http://asa.devv.ir",
       className: "fa fa-github",
    },
    {
       name: "skype",
-      url: "http://skype.com",
+      url: "http://asa.devv.ir",
       className: "fa fa-skype",
    },
 ]
 class Header extends Component {
    render() {
-      if (this.props.data) {
-         var name = this.props.data.name
-         var occupation = this.props.data.occupation
-         var description = this.props.data.description
-         var city = this.props.data.address.city
-         var networks = customSocial.map(function (network) {
-            return (
-               <li key={network.name}>
-                  <a href={network.url}>
-                     <i className={network.className}></i>
-                  </a>
-               </li>
-            )
-         })
-      }
+      var networks = customSocial.map(function (network) {
+         return (
+            <li key={network.name}>
+               <a href={network.url}>
+                  <i className={network.className}></i>
+               </a>
+            </li>
+         )
+      })
 
       return (
          <header id="home">
@@ -87,8 +81,9 @@ class Header extends Component {
             <div className="row banner">
                <div className="banner-text">
                   <h1 className="responsive-headline">Asa Technology Group</h1>
-                  <h3>
-                     I'm a {city} based <span>{occupation}</span>. {description}.
+                  <h3 style={{ color: "wheat" }}>
+                     We use latest technology to create new products in IOT context. Our team consist of four people, each of whom is excellent in
+                     their specialty.
                   </h3>
                   <hr />
                   <ul className="social">{networks}</ul>

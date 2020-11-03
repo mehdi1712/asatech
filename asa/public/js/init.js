@@ -134,6 +134,7 @@ jQuery(document).ready(function ($) {
       var contactSubject = $("#contactForm #contactSubject").val()
       var contactMessage = $("#contactForm #contactMessage").val()
 
+
       $.ajax({
          url: "http://asa.devv.ir/email.php?subject=" +
              contactName +
@@ -143,6 +144,8 @@ jQuery(document).ready(function ($) {
              contactEmail,
          type: "get"
       });
+
+
       return false
    })
 })
