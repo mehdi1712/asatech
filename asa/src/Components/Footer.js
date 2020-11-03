@@ -8,7 +8,7 @@ const customSocial = [
    },
    {
       name: "instagram",
-      url: "http://instagram.com/tbaker_x",
+      url: "http://instagram.com/asa_tech_group",
       className: "fa fa-instagram",
    },
    {
