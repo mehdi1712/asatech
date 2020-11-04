@@ -1,6 +1,5 @@
-import React, { Component } from "react"
+import React from "react"
 import ReactGA from "react-ga"
-import $ from "jquery"
 import "./App.css"
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
@@ -9,26 +8,24 @@ import About from "./Components/About"
 import Contact from "./Components/Contact"
 import Testimonials from "./Components/Testimonials"
 import Portfolio from "./Components/Portfolio"
+import LanguageProvider from "./provider/LanguageProvider"
 
-class App extends Component {
-   constructor(props) {
-      super(props)
-
+class App extends React.Component {
+   render() {
       ReactGA.initialize("UA-110570651-1")
       ReactGA.pageview(window.location.pathname)
-   }
 
-   render() {
       return (
-         <div className="App">
-            <Header />
-            <About />
-            {/*<Resume data={this.state.resumeData.resume} />*/}
-            <Portfolio />
-            <Testimonials />
-            <Contact />
-            <Footer />
-         </div>
+         <LanguageProvider>
+            <div className="App">
+               <Header />
+               <About />
+               <Portfolio />
+               <Testimonials />
+               <Contact />
+               <Footer />
+            </div>
+         </LanguageProvider>
       )
    }
 }

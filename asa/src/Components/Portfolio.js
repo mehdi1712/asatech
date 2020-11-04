@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import { useLanguageData } from "../provider/LanguageProvider"
 const customProjects = [
    {
       title: "Smart Home",
@@ -32,44 +32,43 @@ const customProjects = [
       url: "http://asa.devv.ir",
    },
 ]
-class Portfolio extends Component {
-   render() {
-      var projects = customProjects.map(function (projects) {
-         var projectImage = "images/portfolio/" + projects.image
-         return (
-            <div key={projects.title} className="columns portfolio-item">
-               <div className="item-wrap">
-                  <a href={projects.url} title={projects.title}>
-                     <img alt={projects.title} src={projectImage} />
-                     <div className="overlay">
-                        <div className="portfolio-item-meta">
-                           <h5>{projects.title}</h5>
-                           <p>{projects.category}</p>
-                        </div>
-                     </div>
-                     <div className="link-icon">
-                        <i className="fa fa-link"></i>
-                     </div>
-                  </a>
-               </div>
-            </div>
-         )
-      })
-
+const Portfolio = () => {
+   const { Portfolio } = useLanguageData()
+   var projects = customProjects.map(function (projects) {
+      var projectImage = "images/portfolio/" + projects.image
       return (
-         <section id="portfolio">
-            <div className="row">
-               <div className="twelve columns collapsed">
-                  <h1>Check Out Some of Our Works.</h1>
-
-                  <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-                     {projects}
+         <div key={projects.title} className="columns portfolio-item">
+            <div className="item-wrap">
+               <a href={projects.url} title={projects.title}>
+                  <img alt={projects.title} src={projectImage} />
+                  <div className="overlay">
+                     <div className="portfolio-item-meta">
+                        <h5>{projects.title}</h5>
+                        <p>{projects.category}</p>
+                     </div>
                   </div>
+                  <div className="link-icon">
+                     <i className="fa fa-link"></i>
+                  </div>
+               </a>
+            </div>
+         </div>
+      )
+   })
+
+   return (
+      <section id="portfolio">
+         <div className="row">
+            <div className="twelve columns collapsed">
+               <h1 style={{ fontWeight: "bold" }}>{Portfolio.Title}</h1>
+
+               <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                  {projects}
                </div>
             </div>
-         </section>
-      )
-   }
+         </div>
+      </section>
+   )
 }
 
 export default Portfolio
