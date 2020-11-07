@@ -1,7 +1,10 @@
 import React from "react"
-import { useLanguageData } from "../provider/LanguageProvider"
+import { useLanguageData, useLanguageState } from "../provider/LanguageProvider"
+import "./Testimonials.css"
 const Testimonials = () => {
    const { Testimonials } = useLanguageData()
+   const lang = useLanguageState()
+
    // if(this.props.data){
    //   var testimonials = this.props.data.testimonials.map(function(testimonials){
    //     return (
@@ -19,7 +22,7 @@ const Testimonials = () => {
    return (
       <section id="testimonials">
          <div className="text-container">
-            <div className="row">
+            <div className={lang ? "row fa" : "row eng"}>
                {/*<div className="two columns header-col">*/}
                {/*   <h1><span>Client Testimonials</span></h1>*/}
                {/*</div>*/}
@@ -28,7 +31,7 @@ const Testimonials = () => {
                   {/*<ul className="slides">*/}
                   {/*{testimonials}*/}
                   {/*</ul>*/}
-                  <p style={{ color: "white" }}>
+                  <p style={{ color: "white", lineHeight: "normal" }}>
                      {Testimonials.Paragraph1}
                      <br />
                      <br />

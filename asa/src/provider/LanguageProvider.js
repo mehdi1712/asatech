@@ -90,7 +90,7 @@ function LanguageProvider({ children }) {
 const useLanguageState = () => {
    const language = React.useContext(LanguageContext)
    if (language === undefined) {
-      throw new Error("render <CountProvider /> at top of the tree")
+      throw new Error("render <Provider /> at top of the tree")
    }
    return language
 }
@@ -98,7 +98,7 @@ const useLanguageSetState = () => {
    const setlanguage = React.useContext(LanguageContextSetState)
 
    if (setlanguage === undefined) {
-      throw new Error("render <LangProvider /> at top of the tree")
+      throw new Error("render <Provider /> at top of the tree")
    }
    return setlanguage
 }

@@ -10,24 +10,22 @@ import Testimonials from "./Components/Testimonials"
 import Portfolio from "./Components/Portfolio"
 import LanguageProvider from "./provider/LanguageProvider"
 
-class App extends React.Component {
-   render() {
-      ReactGA.initialize("UA-110570651-1")
-      ReactGA.pageview(window.location.pathname)
+const App = () => {
+   ReactGA.initialize("UA-110570651-1")
+   ReactGA.pageview(window.location.pathname)
 
-      return (
-         <LanguageProvider>
-            <div className="App">
-               <Header />
-               <About />
-               <Portfolio />
-               <Testimonials />
-               <Contact />
-               <Footer />
-            </div>
-         </LanguageProvider>
-      )
-   }
+   return (
+      <LanguageProvider>
+         <div className="App">
+            <Header />
+            <About />
+            <Portfolio />
+            <Testimonials />
+            <Contact />
+            <Footer />
+         </div>
+      </LanguageProvider>
+   )
 }
 
 export default App

@@ -1,38 +1,30 @@
 import React, { Component } from "react"
 
-const customSocial = [
-   {
-      name: "linkedin",
-      url: "https://www.linkedin.com/company/asa-technology-group",
-      className: "fa fa-linkedin",
-   },
-   {
-      name: "instagram",
-      url: "http://instagram.com/asa_tech_group",
-      className: "fa fa-instagram",
-   },
-   {
-      name: "github",
-      url: "http://asa.devv.ir",
-      className: "fa fa-github",
-   },
-   {
-      name: "skype",
-      url: "http://asa.devv.ir",
-      className: "fa fa-skype",
-   },
-]
+import InstagramIcon from "@material-ui/icons/Instagram"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+import GitHubIcon from "@material-ui/icons/GitHub"
+
 class Footer extends Component {
    render() {
-      var networks = customSocial.map(function (network) {
-         return (
-            <li key={network.name}>
-               <a href={network.url}>
-                  <i className={network.className}></i>
+      var networks = (
+         <ul>
+            <li key="linkedin">
+               <a href="https://www.linkedin.com/company/asa-technology-groupedin">
+                  <InstagramIcon style={{ fontSize: 40 }} />
                </a>
             </li>
-         )
-      })
+            <li key="linkedin">
+               <a href="https://www.linkedin.com/company/asa-technology-groupedin">
+                  <LinkedInIcon style={{ fontSize: 40 }} />
+               </a>
+            </li>
+            <li key="linkedin">
+               <a href="https://www.linkedin.com/company/asa-technology-groupedin">
+                  <GitHubIcon style={{ fontSize: 40 }} />
+               </a>
+            </li>
+         </ul>
+      )
 
       return (
          <footer>

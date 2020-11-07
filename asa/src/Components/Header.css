@@ -37,3 +37,9 @@
    background-color: #f06000;
    left: 2px;
 }
+.social {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}

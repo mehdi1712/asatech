@@ -8,7 +8,7 @@ const Contact = () => {
          <div className="row section-head">
             <div className="two columns header-col">
                <h1>
-                  <span>Get In Touch.</span>
+                  <span></span>
                </h1>
             </div>
 
