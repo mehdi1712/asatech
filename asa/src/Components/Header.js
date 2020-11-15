@@ -13,8 +13,8 @@ const Header = () => {
 
    var networks = (
       <ul>
-         <li key="linkedin">
-            <a href="https://www.linkedin.com/company/asa-technology-groupedin">
+         <li key="Instagram">
+            <a href="https://www.instagram.com/asa_tech_group">
                <InstagramIcon style={{ fontSize: 40 }} />
             </a>
          </li>
@@ -23,8 +23,8 @@ const Header = () => {
                <LinkedInIcon style={{ fontSize: 40 }} />
             </a>
          </li>
-         <li key="linkedin">
-            <a href="https://www.linkedin.com/company/asa-technology-groupedin">
+         <li key="github">
+            <a href="https://asa.devv.ir">
                <GitHubIcon style={{ fontSize: 40 }} />
             </a>
          </li>

@@ -6,11 +6,13 @@ body {
    -moz-osx-font-smoothing: grayscale;
 }
 a {
-   font-family: "IranSans", sans-serif !important;
+   font-family: "IranSans", sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    font-weight: bold;
    text-decoration: none;
+   letter-spacing: 0px;
+   font-size: larger;
 }
 
 code {
@@ -20,7 +22,7 @@ code {
    white-space: normal;
 }
 * {
-   font-family: "IranSans", sans-serif !important;
+   font-family: "IranSans", sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
